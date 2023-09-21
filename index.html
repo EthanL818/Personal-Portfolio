@@ -9,14 +9,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Quicksand:wght@300&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <link rel = "stylesheet" href = "style.css"/>
 </head>
 
-
 <body>
 
-    <!--navbar-->
-    <section>
+  <!--loading animation on page entry-->
+  <div class="preloader">
+    <div class="loader"></div>
+  </div>
+
+    <!--navbar--> 
       <nav class="navbar navbar-expand-md navbar-dark bg-dark">
         <div class="container-fluid">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,10 +29,10 @@
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav mx-auto  me-auto mb-2 mt-2 mb-md-0">
               <li class="nav-item">
-                <a class="nav-link" href="#header">Home</a>
+                <a class="nav-link" href="#about">About</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#about">About</a>
+                <a class="nav-link" href="#timeline">Timeline</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#projects">Projects</a>
@@ -40,11 +44,9 @@
           </div>
         </div>
       </nav>
-      </div>
-  </section>
 
     <!--first-->
-    <section id = header class = "first page">
+    <section id = "header" class = "first page">
         <div class = "header py-2">
             <img class = "background-img" src = "assets/header.gif">
             <div class = "header-text">
@@ -56,28 +58,30 @@
     </section>
 
     <!--about me-->
-
-    <section id = about>
+    <section id = "about">
         <div class="container col-xxl-10">
             <div class="row flex-lg-row-reverse align-items-center g-5 pb-5 mx">
               <div class="col-10 col-sm-8 col-lg-6 px-5">
-                <div class = "gradient-border me-img">
-                  <img id = "me-picture" src="assets/IMG_1720.png" class="d-block mx-lg-auto img-fluid" loading="lazy">
-                </div>
+                <div class = "gradient-border mx-lg-auto">
+                  <img id = "me-picture" src="assets/headshot.png" class="d-block mx-lg-auto d-block img-fluid" loading="lazy">
+                </div> 
               </div>
+              
               <div class="col-lg-6">
-                <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-4">About <span style = "color: #892CDC;">me.</span></h1>
+                <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-4">About <span style = "color: #892CDC;">Me</span></h1>
                 <p class="lead">
                   Hi! My name is <span style = "color: #BC6FF1">Ethan Liu</span>. I'm a second year software engineering student at Western University in London, Ontario. <br></br>
 
                   I began my programming journey in the sixth grade, where I was introduced to the programming language Scratch. 
                   Ever since then, I've developed an interest in the inner workings of everything software related.<br></br>
                   
-                  <span style = "font-style: italic;">"How does this website work?"</span>, <span style = "font-style: italic;">"How many people did it take to make this game?"</span>,
-                  <span style = "font-style: italic;">"Why does this button do what it does?"</span>, etc. <br></br>
+                  <span style = "font-style: italic;">"How does this website work?"</span>, <span style = "font-style: italic;">"How many people did it take to make this game?"</span>, etc. <br></br>
 
-                  These sorts of questions plagued my mind, up until I decided to pursue software engineering with my post-secondary education. Fast-forward to today, and I'm currently
-                  working on developing my fullstack skills.<br></br>
+                  Those types of questions led me to choose software engineering as my major.
+                  
+                  <div class = "animated-text mb-4 mt-2">
+                    As for my hobbies, I enjoy <span></span>.
+                  </div>
                 </p>
 
                 <div class="d-grid gap-2 d-md-flex justify-content-md-start">
@@ -112,7 +116,6 @@
           </div>
 
     <!--skills-->
-    
       <div class="container px-4 py-5" id="icon-grid">
         <h2 class="pb-2 border-bottom">Skills</h2>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5">
@@ -122,7 +125,7 @@
             </svg>
             <div>
               <h3 class="fw-bold mb-2 fs-4 text-body-emphasis">Web Development</h3>
-              <p> Proficient in website development, employing cutting-edge technologies and frameworks to deliver seamless user experiences and visually stunning designs.</p>
+              <p> Proficient in website development, employing various technologies and frameworks to deliver seamless user experiences and visually stunning designs.</p>
             </div>
           </div>
           <div class="col d-flex align-items-start">
@@ -138,11 +141,11 @@
           </div>
           <div class="col d-flex align-items-start">
             <svg xmlns="http://www.w3.org/2000/svg" width="1.75em" height="1.75em" fill="currentColor" class="bi text-body-secondary flex-shrink-0 me-3" viewBox="0 0 16 16">
-              <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7Zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm-5.784 6A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216ZM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/>
+              <path d="M8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
             </svg>
             <div>
-              <h3 class="fw-bold mb-2 fs-4 text-body-emphasis">Cross-industry Experience</h3>
-              <p>Leveraging my cross-industry experience as an analyst at RBC, I bring a unique perspective to problem-solving.
+              <h3 class="fw-bold mb-2 fs-4 text-body-emphasis">Growth Mindset</h3>
+              <p>I cultivate a growth mindset, constantly seeking opportunities to learn and evolve in my journey as a software engineer.
               </p>
             </div>
           </div>
@@ -157,14 +160,63 @@
             </div>
           </div>
         </div>
-        
       </div>
     </section>
+    <div class="b-example-divider"></div>
+
+    <!--work timeline-->
+    <section id = "timeline">
+      <div class="container py-5">
+      <div class="main-timeline-2">
+        <div class="timeline-2 left-2">
+          <div class="card">
+            <img src="./assets/remax.jpg" class="card-img-top" alt="Responsive image" width="100%" height="260" preserveAspectRatio="xMidYMid slice">
+            <div class="card-body p-4">
+              <h4 class="fw-bold mb-4">Marketing Assistant, <span style = "color: #892CDC;">RE/MAX Partners Realty</span></h4>
+              <p class="text-muted">Jun 2019 - Sep 2022</p>
+              <ul>
+                <li class = "mb-2">Oversaw client database management and streamlined email communications for enhanced client engagement and satisfaction.</li>
+                <li class = "mb-2">Created diverse media assets, including business cards, flyers, brochures, and social media content.</li>
+                <li class = "mb-2">Assisted in the development of various marketing strategies.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-2 right-2">
+          <div class="card">
+            <img src="./assets/rbc.jpg" class="card-img-top" alt="Responsive image" width="100%" height="260" preserveAspectRatio="xMidYMid slice">
+            <div class="card-body p-4">
+              <h4 class="fw-bold mb-4">Product Effectiveness Analyst, <span style = "color: #892CDC;">RBC Insurance</span></h4>
+              <p class="text-muted">May 2023 - Sep 2023</p>
+              <ul>
+                <li class = "mb-2">Performed UAT Testing on various digital e-Applications, via creating and executing a wide array of varied test cases. Proficiently managed bug testing and tracking processes within the Jira platform, ensuring meticulous identification, reporting, and resolution of issues to enhance product quality and project efficiency.</li>
+                <li class = "mb-2">Crafted an extensive document outlining the challenges faced by first-time insurance buyers when researching product options online, and presented various viable solutions.</li>
+                <li class = "mb-2">Revamped and enhanced internal competitive intelligence documents, ensuring they remained up-to-date and highly informative.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="timeline-2 left-2">
+          <div class="card">
+            <img src="./assets/western.jpeg" class="card-img-top" alt="Responsive image" width="100%" height="280" preserveAspectRatio="xMidYMid slice">
+            <div class="card-body p-4">
+              <h4 class="fw-bold mb-4">2nd Year Student, <span style = "color: #892CDC;">Western University</span></h4>
+              <p class="text-muted">Now</p>
+              <p class="mb-0">As a second-year software engineering student at Western University in London, Ontario, I'm learning the ropes of software development. 
+                We're covering programming, algorithms, and teamwork, all of which are crucial in building software. 
+                I'm excited to keep growing in this field and applying what I learn to real-world challenges.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+    <div class="b-example-divider"></div>
 
     <!--projects-->
-    <section id = projects>
-
-      <section class = "projects-header gradient-background">
+    <section id = "projects">
+      <section class = "gradient-background">
         <div class="px-4 py-5 text-center">
           <h1 class="name display-4 fw-bold text-body-emphasis">Projects</span></h1>
           </div>
@@ -181,7 +233,7 @@
               <div class="card shadow-sm">
                 <img class="bd-placeholder-img card-img-top" width="100%" height="225" src="./assets/gamefolio.png" role="img"preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#55595c"></rect></img>
                 <div class="card-body">
-                  <p class="card-text"><span style = "color:rgb(255, 72, 96)">Gamefolio</span>: Web application designed to help display your favourite games. First time utilizing NodeJS and Express for back-end.</p>
+                  <p class="card-text"><span style = "color:rgb(255, 72, 96)">Gamefolio</span>: Web application designed to help organize your favourite games. First time utilizing NodeJS and Express for back-end.</p>
                   <div class="d-flex justify-content-between align-items-center">
                     <div class="btn-group">
                       <a type="button" class="btn btn-sm btn-outline-secondary" href = "https://gamefolio.onrender.com/" target="_blank">View</a>
@@ -261,7 +313,6 @@
               </div>
             </div>
           </div>
-
     </section>
 
     <!--recent developments-->
@@ -322,49 +373,49 @@
       </div>
     </div>
 
-
     <!--contact-->
-
     <section id = "contact">
       <div class="b-example-divider"></div>
-      <div class="px-4 pt-3 my-3 text-center border-bottom">
-        <h1 class="display-4 fw-bold text-body-emphasis pb-3">Contact</h1>
-
-        <div class="col-lg-6 mx-auto">
-          <p class="lead mb-4 text-center">
-            <span class = "display-6">I would love to connect with you!</span> <br><br>
-            
-            If you have any questions, collaboration ideas, or simply want to say hello, you can find me on LinkedIn and GitHub. 
-                      
-            I'm always open to networking, sharing knowledge, and collaborating on exciting projects. 
-          </p>
-
-          <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
-            <a type="button" class="btn btn-primary btn-lg px-4" target="_blank" href = "mailto:ethanliu818@gmail.com"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
-              <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
-          </svg> Email</a>
-
-            <a type="button" class="btn btn-outline-secondary btn-lg px-4" target="_blank" href="https://www.linkedin.com/in/ethan-liu-b27891277/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
-              <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"></path>
-              </svg> LinkedIn</a>
-
-            <a type="button" class="btn btn-outline-secondary btn-lg px-4" target="_blank" href="https://github.com/EthanL818"> <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
-              <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
-            </svg> GitHub</a>
-          </div>
-        </div>
-        <div class="overflow-hidden" style="max-height: 30vh;">
-          <div class="container px-5">
-            <img src="./assets/email-logo.png" class="img-fluid mb-4" alt="Example image" width="700" height="500" loading="lazy">
+      <div class="container my-5">
+        <div class="row justify-content-center">
+          <div class="col-lg-12">
+            <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-4">Contact <span style = "color:#892CDC">Me</span></h1>
+            <form>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="your-name" class="form-label">Your Name</label>
+                  <input type="text" class="form-control" id="your-name" name="your-name" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="your-surname" class="form-label">Your Surname</label>
+                  <input type="text" class="form-control" id="your-surname" name="your-surname" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="your-email" class="form-label">Your Email</label>
+                  <input type="email" class="form-control" id="your-email" name="your-email" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="your-subject" class="form-label">Your Subject</label>
+                  <input type="text" class="form-control" id="your-subject" name="your-subject">
+                </div>
+                <div class="col-12">
+                  <label for="your-message" class="form-label">Your Message</label>
+                  <textarea class="form-control" id="your-message" name="your-message" rows="5" required></textarea>
+                </div>
+                <div class="col-12">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <button type="submit" class="btn btn-primary w-100 fw-bold" >Send</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
       </div>
       <div class="b-example-divider"></div>
     </section>
-
-
-
-
 
     <!--footer-->
     <section class = "gradient-background">
@@ -384,5 +435,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" 
     crossorigin="anonymous"></script>
+    <script src = "script.js"/></script>
 </body>
 </html>

@@ -166,7 +166,7 @@ span {
 }
 
 #timeline {
-    background: linear-gradient(to bottom, #212529, #230431, #212529);
+    background: linear-gradient(to bottom, #212529, #14021d, #212529);
 }
 
 /* The actual timeline (the vertical ruler) */
